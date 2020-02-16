@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import ExpenseList from "./Components/ExpenseList";
 import ExpenseForm from "./Components/ExpenseForm";
@@ -48,6 +48,11 @@ function App() {
   const [edit, setEdit] = useState(false);
   //edit item
   const [id, setId] = useState(0);
+
+  //UseEffect
+  useEffect(() => {
+    localStorage.setItem("expenses", JSON.stringify(expenses));
+  }, [expenses]);
 
   // functionality
   const handleCharge = e => {
