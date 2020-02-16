@@ -49,7 +49,7 @@ function App() {
   //edit item
   const [id, setId] = useState(0);
 
-  //UseEffect
+  //UseEffect LocalStorage
   useEffect(() => {
     localStorage.setItem("expenses", JSON.stringify(expenses));
   }, [expenses]);
